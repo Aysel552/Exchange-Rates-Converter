@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -10,6 +10,8 @@ function App() {
       const response = await fetch(`https://api.apilayer.com/currency_data/live?base=USD&symbols=EUR,GBP`)
     }
   })
+
+  const[mySearch,setMySearch] = useState("");
   return (
     <div className="App">
      <h2>Adding</h2>
